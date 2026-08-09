@@ -1,7 +1,3 @@
-##################################
-#Create time: 20230312
-#Create by: CHAN Pak Hei 210054899
-##################################
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
 from selenium.common.exceptions import NoSuchElementException
@@ -29,10 +25,8 @@ class ScreenShot:
 
     def select_driver_by_os(self):
         if sys.platform.startswith('Linux'):
-            # return f"{os.path.dirname(__file__)}/website_screenshot/chromedriver_linux64/chromedriver"
             return f"{os.path.dirname(__file__)}/website_screenshot/geckodriver_linux64/geckodriver"
         elif sys.platform.startswith('darwin'):
-            # return f"{os.path.dirname(__file__)}/website_screenshot/chromedriver_mac64/chromedriver"
             return f"{os.path.dirname(__file__)}/website_screenshot/geckodriver_macos/geckodriver"
         else:
             return False
@@ -88,9 +82,6 @@ class ScreenShot:
 
 
 if __name__ == "__main__":
-
-#     # url = "https://www.moonlol.com/twrp-recovery%E5%8D%A1%E5%88%B7rom-5967.html"
-    # web_site_list= ["https://www.google.com/"]
     web_site_list= ["https://google.com"]
     tools_SC = ScreenShot(web_site_list)
     x = tools_SC.main()
