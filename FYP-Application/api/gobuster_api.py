@@ -301,18 +301,6 @@ class Gobuster:
 
 if __name__=="__main__":
     x = 1
-    # url="abrictosecurity.com"
-    # url = "http://xyz.chan2001.com/wordpress"
-    # url="http://192.168.1.50/fyp/wordpress4.9"
-    # url = "https://xyz.chan2001.com:444/fyp/test/re_dir.html" #redir url
-    # url="https://www.angrybirds.com"
-    # url="http://172.16.103.128:80/wordpress/"
-    # scan = Gobuster()
-    # a = scan.dir_scan(url=url,wordlist="/Users/daniel/Desktop/FYP_tools/Wordlists/filter_wordlists.txt")
-    # # print(a)
-    # scan.gobuster_filter()
-    # scan.go_check_redir_host()
-    # info  = {'target_url': 'http://172.16.103.128/joomla/', 'CMS_name': 'default_wordlist', 'wordlist': '/Users/daniel/Desktop/FYP_tools/Wordlists/common.txt'}
     x = Gobuster()
     info,raw = x.vhost_scan(url="https://example.com")
     print(info)
