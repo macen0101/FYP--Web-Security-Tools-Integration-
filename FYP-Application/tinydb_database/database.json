@@ -1,0 +1,2988 @@
+{
+    "_default": {
+        "1": {
+            "date_time": "2023-04-22 15:21:46",
+            "target_server_domain": "http://owasp.local/wordpress/",
+            "target_server_ip": "172.16.180.129",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 1
+                },
+                "Gobuster": {
+                    "open": 1,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 1
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://owasp.local:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "Apache httpd",
+                    "Version": "2.2.14"
+                },
+                {
+                    "tools": "WhatWeb",
+                    "target_url": "http://owasp.local:80/wordpress/",
+                    "web_server": "Apache/2.2.14 (Ubuntu) mod_mono/2.4.3 PHP/5.3.2-1ubuntu4.30 with Suhosin-Patch proxy_html/3.0.1 mod_python/3.3.1 Python/2.6.5 mod_ssl/2.2.14 OpenSSL/0.9.8k Phusion_Passenger/4.0.38 mod_perl/2.0.4 Perl/v5.10.1",
+                    "OS": "Ubuntu Linux",
+                    "CMS_name": "WordPress",
+                    "CMS_version": "2.0",
+                    "wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3268: /cgi-bin/: Directory indexing found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-630: IIS may reveal its internal or real IP in the Location header via a request to the /images directory. The value is \"http://127.0.1.1/images/\".\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-877: HTTP TRACE method is active, suggesting the host is vulnerable to XST\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /phpmyadmin/changelog.php: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3268: /test/: Directory indexing found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /test/: This might be interesting...\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /cgi-bin/: This might be interesting... possibly a system shell found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3093: /.bash_history: A user's home directory may be set to the web root, the shell history was retrieved. This should not be accessible via the web.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3268: /icons/: Directory indexing found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3268: /images/: Directory indexing found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3268: /images/?pattern=/etc/*&sort=name: Directory indexing found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3233: /icons/README: Apache default file found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /phpmyadmin/Documentation.html: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "filtered",
+                    "result": "+ OSVDB-3268: /images/?pattern=/etc/*&sort=name: Directory indexing found.\n"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//readme.html",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_24_56_505997.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//index.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_24_56_796002.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/admin-db.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_24_56_897571.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/import/greymatter.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_24_56_971456.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/import/livejournal.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_24_57_044656.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/install-helper.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_24_57_172162.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/install.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_24_57_318443.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/link-parse-opml.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_24_57_447194.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/options-head.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_24_57_537225.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/setup-config.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_24_57_701567.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/upgrade-schema.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_24_57_809556.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/update-links.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_24_57_954078.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/upgrade.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_24_58_255883.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-blog-header.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_24_58_454313.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/blank.htm",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_24_58_612883.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/license.html",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_24_58_895854.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/about.htm",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_24_59_811823.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/charmap.htm",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_25_00_061136.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/anchor.htm",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_25_00_255765.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/color_picker.htm",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_25_00_470451.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/image.htm",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_25_00_693774.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/link.htm",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_25_00_915586.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/source_editor.htm",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_25_01_148236.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-login.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_25_01_428887.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-register.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_25_01_610981.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/autosave/langs",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_25_01_791122.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/directionality/images",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_25_01_964431.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/directionality/langs",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_25_02_173771.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/inlinepopups/css",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_25_02_326257.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/inlinepopups/images",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_25_02_430014.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/inlinepopups/jscripts",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_25_02_532412.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/wordpress/images",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_25_02_647111.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/wordpress/langs",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_25_02_772621.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/wphelp/images",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_25_02_883082.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/wphelp/langs",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_25_02_987371.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/css",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_25_03_086899.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/jscripts",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_25_03_183327.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/langs",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_25_03_282034.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/images",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_15_25_03_387762.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                }
+            ]
+        },
+        "2": {
+            "date_time": "2023-04-22 15:33:49",
+            "target_server_domain": "http://dc8.local",
+            "target_server_ip": "172.16.180.134",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 0
+                },
+                "WhatWeb": {
+                    "open": 1
+                },
+                "Gobuster": {
+                    "open": 0,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 0
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "WhatWeb",
+                    "target_url": "http://dc8.local",
+                    "web_server": "Apache",
+                    "OS": null,
+                    "CMS_name": "Drupal",
+                    "CMS_version": null,
+                    "wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/drupal.txt"
+                }
+            ]
+        },
+        "3": {
+            "date_time": "2023-04-22 15:40:51",
+            "target_server_domain": "http://owasp.local/wordpress/",
+            "target_server_ip": "172.16.180.129",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 1
+                },
+                "Gobuster": {
+                    "open": 1,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 1
+                }
+            },
+            "tools_receivedData": []
+        },
+        "4": {
+            "date_time": "2023-04-22 16:30:50",
+            "target_server_domain": "http://xyz.chan2001.com/",
+            "target_server_ip": "119.236.251.100",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 1
+                },
+                "Gobuster": {
+                    "open": 1,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 1
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.18.0"
+                },
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:8888",
+                    "portid": "8888",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.23.4"
+                }
+            ]
+        },
+        "5": {
+            "date_time": "2023-04-22 16:32:19",
+            "target_server_domain": "http://xyz.chan2001.com/",
+            "target_server_ip": "119.236.251.100",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 1
+                },
+                "Gobuster": {
+                    "open": 1,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 1
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.18.0"
+                },
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:8888",
+                    "portid": "8888",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.23.4"
+                }
+            ]
+        },
+        "6": {
+            "date_time": "2023-04-22 16:37:52",
+            "target_server_domain": "http://xyz.chan2001.com/",
+            "target_server_ip": "119.236.251.100",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 1
+                },
+                "Gobuster": {
+                    "open": 1,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 1
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.18.0"
+                },
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:8888",
+                    "portid": "8888",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.23.4"
+                }
+            ]
+        },
+        "7": {
+            "date_time": "2023-04-22 16:40:44",
+            "target_server_domain": "http://xyz.chan2001.com/",
+            "target_server_ip": "119.236.251.100",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 1
+                },
+                "Gobuster": {
+                    "open": 1,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 1
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.18.0"
+                },
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:8888",
+                    "portid": "8888",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.23.4"
+                }
+            ]
+        },
+        "8": {
+            "date_time": "2023-04-22 16:42:58",
+            "target_server_domain": "http://xyz.chan2001.com/",
+            "target_server_ip": "119.236.251.100",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 1
+                },
+                "Gobuster": {
+                    "open": 1,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 1
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.18.0"
+                },
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:8888",
+                    "portid": "8888",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.23.4"
+                }
+            ]
+        },
+        "9": {
+            "date_time": "2023-04-22 16:45:50",
+            "target_server_domain": "http://xyz.chan2001.com/",
+            "target_server_ip": "119.236.251.100",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 1
+                },
+                "Gobuster": {
+                    "open": 1,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 1
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.18.0"
+                },
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:8888",
+                    "portid": "8888",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.23.4"
+                }
+            ]
+        },
+        "10": {
+            "date_time": "2023-04-22 16:52:16",
+            "target_server_domain": "http://xyz.chan2001.com/",
+            "target_server_ip": "119.236.251.100",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 1
+                },
+                "Gobuster": {
+                    "open": 1,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 1
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.18.0"
+                },
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:8888",
+                    "portid": "8888",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.23.4"
+                }
+            ]
+        },
+        "11": {
+            "date_time": "2023-04-22 16:57:18",
+            "target_server_domain": "http://xyz.chan2001.com/",
+            "target_server_ip": "119.236.251.100",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 1
+                },
+                "Gobuster": {
+                    "open": 1,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 1
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.18.0"
+                },
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:8888",
+                    "portid": "8888",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.23.4"
+                }
+            ]
+        },
+        "12": {
+            "date_time": "2023-04-22 17:00:05",
+            "target_server_domain": "http://xyz.chan2001.com/",
+            "target_server_ip": "119.236.251.100",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 1
+                },
+                "Gobuster": {
+                    "open": 1,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 1
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.18.0"
+                },
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:8888",
+                    "portid": "8888",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.23.4"
+                }
+            ]
+        },
+        "13": {
+            "date_time": "2023-04-22 17:08:07",
+            "target_server_domain": "http://xyz.chan2001.com/",
+            "target_server_ip": "119.236.251.100",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 1
+                },
+                "Gobuster": {
+                    "open": 1,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 1
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.18.0"
+                },
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:8888",
+                    "portid": "8888",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.23.4"
+                }
+            ]
+        },
+        "14": {
+            "date_time": "2023-04-22 17:09:56",
+            "target_server_domain": "http://xyz.chan2001.com/",
+            "target_server_ip": "119.236.251.100",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 1
+                },
+                "Gobuster": {
+                    "open": 1,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 1
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.18.0"
+                },
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:8888",
+                    "portid": "8888",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.23.4"
+                }
+            ]
+        },
+        "15": {
+            "date_time": "2023-04-22 17:15:22",
+            "target_server_domain": "xyz.chan2001.com",
+            "target_server_ip": "119.236.251.100",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 1
+                },
+                "Gobuster": {
+                    "open": 1,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 1
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.18.0"
+                },
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:8888",
+                    "portid": "8888",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.23.4"
+                }
+            ]
+        },
+        "16": {
+            "date_time": "2023-04-22 17:19:38",
+            "target_server_domain": "xyz.chan2001.com",
+            "target_server_ip": "119.236.251.100",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 1
+                },
+                "Gobuster": {
+                    "open": 1,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 1
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.18.0"
+                },
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:8888",
+                    "portid": "8888",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.23.4"
+                },
+                {
+                    "tools": "WhatWeb",
+                    "target_url": "http://xyz.chan2001.com:8888",
+                    "web_server": "nginx/1.23.4",
+                    "OS": null,
+                    "CMS_name": "unkwon",
+                    "CMS_version": "unkwon",
+                    "wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/common.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://xyz.chan2001.com:8888/index.html",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_17_21_03_522875.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/common.txt"
+                }
+            ]
+        },
+        "17": {
+            "date_time": "2023-04-22 18:21:24",
+            "target_server_domain": "http://xyz.chan2001.com/fyp/wordpress4.9/",
+            "target_server_ip": "119.236.251.100",
+            "tools_user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 13.3; rv:112.0) Gecko/20100101 Firefox/112.0",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 1
+                },
+                "Gobuster": {
+                    "open": 1,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 1
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.18.0"
+                },
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:8888",
+                    "portid": "8888",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.23.4"
+                },
+                {
+                    "tools": "WhatWeb",
+                    "target_url": "http://xyz.chan2001.com:80/fyp/wordpress4.9/",
+                    "web_server": "nginx/1.18.0",
+                    "OS": null,
+                    "CMS_name": "WordPress",
+                    "CMS_version": "4.9",
+                    "wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /phpmyadmin/ChangeLog: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.\n"
+                }
+            ]
+        },
+        "18": {
+            "date_time": "2023-04-22 18:24:47",
+            "target_server_domain": "http://xyz.chan2001.com/fyp/wordpress4.9/",
+            "target_server_ip": "119.236.251.100",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 1
+                },
+                "Gobuster": {
+                    "open": 1,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 1
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.18.0"
+                },
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:8888",
+                    "portid": "8888",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.23.4"
+                },
+                {
+                    "tools": "WhatWeb",
+                    "target_url": "http://xyz.chan2001.com:80/fyp/wordpress4.9/",
+                    "web_server": "nginx/1.18.0",
+                    "OS": null,
+                    "CMS_name": "WordPress",
+                    "CMS_version": "4.9",
+                    "wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://xyz.chan2001.com:80/fyp/wordpress4.9//wp-blog-header.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_18_26_17_451063.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://xyz.chan2001.com:80/fyp/wordpress4.9//wp-login.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_18_26_17_974996.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://xyz.chan2001.com:80/fyp/wordpress4.9//index.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_18_26_18_745462.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://xyz.chan2001.com:80/fyp/wordpress4.9//index.php",
+                    "png_path": false,
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://xyz.chan2001.com:80/fyp/wordpress4.9//wp-admin",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_18_26_19_435378.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://xyz.chan2001.com:80/fyp/wordpress4.9//wp-content",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_18_26_19_657403.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                }
+            ]
+        },
+        "19": {
+            "date_time": "2023-04-22 18:32:45",
+            "target_server_domain": "http://owasp.local/wordpress",
+            "target_server_ip": "172.16.180.129",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 1
+                },
+                "Gobuster": {
+                    "open": 1,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 1
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://owasp.local:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "Apache httpd",
+                    "Version": "2.2.14"
+                },
+                {
+                    "tools": "WhatWeb",
+                    "target_url": "http://owasp.local:80/wordpress",
+                    "web_server": "Apache/2.2.14 (Ubuntu) mod_mono/2.4.3 PHP/5.3.2-1ubuntu4.30 with Suhosin-Patch proxy_html/3.0.1 mod_python/3.3.1 Python/2.6.5 mod_ssl/2.2.14 OpenSSL/0.9.8k Phusion_Passenger/4.0.38 mod_perl/2.0.4 Perl/v5.10.1",
+                    "OS": "Ubuntu Linux",
+                    "CMS_name": "WordPress",
+                    "CMS_version": "2.0",
+                    "wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                }
+            ]
+        },
+        "20": {
+            "date_time": "2023-04-22 18:35:00",
+            "target_server_domain": "http://owasp.local/wordpress/",
+            "target_server_ip": "172.16.180.129",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 0
+                },
+                "Gobuster": {
+                    "open": 1,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 0
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://owasp.local:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "Apache httpd",
+                    "Version": "2.2.14"
+                }
+            ]
+        },
+        "21": {
+            "date_time": "2023-04-22 18:37:06",
+            "target_server_domain": "http://owasp.local/wordpress/",
+            "target_server_ip": "172.16.180.129",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 1
+                },
+                "Gobuster": {
+                    "open": 1,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 1
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://owasp.local:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "Apache httpd",
+                    "Version": "2.2.14"
+                },
+                {
+                    "tools": "WhatWeb",
+                    "target_url": "http://owasp.local:80/wordpress/",
+                    "web_server": "Apache/2.2.14 (Ubuntu) mod_mono/2.4.3 PHP/5.3.2-1ubuntu4.30 with Suhosin-Patch proxy_html/3.0.1 mod_python/3.3.1 Python/2.6.5 mod_ssl/2.2.14 OpenSSL/0.9.8k Phusion_Passenger/4.0.38 mod_perl/2.0.4 Perl/v5.10.1",
+                    "OS": "Ubuntu Linux",
+                    "CMS_name": "WordPress",
+                    "CMS_version": "2.0",
+                    "wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3268: /cgi-bin/: Directory indexing found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-630: IIS may reveal its internal or real IP in the Location header via a request to the /images directory. The value is \"http://127.0.1.1/images/\".\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-877: HTTP TRACE method is active, suggesting the host is vulnerable to XST\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /phpmyadmin/changelog.php: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3268: /test/: Directory indexing found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /test/: This might be interesting...\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /cgi-bin/: This might be interesting... possibly a system shell found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3093: /.bash_history: A user's home directory may be set to the web root, the shell history was retrieved. This should not be accessible via the web.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3268: /icons/: Directory indexing found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3268: /images/: Directory indexing found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3268: /images/?pattern=/etc/*&sort=name: Directory indexing found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3233: /icons/README: Apache default file found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /phpmyadmin/Documentation.html: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "filtered",
+                    "result": "+ OSVDB-3268: /images/?pattern=/etc/*&sort=name: Directory indexing found.\n"
+                }
+            ]
+        },
+        "22": {
+            "date_time": "2023-04-22 20:12:08",
+            "target_server_domain": "http://dc8.local/?nid=1",
+            "target_server_ip": "",
+            "tools_user_agent": "",
+            "tools_config": {},
+            "tools_receivedData": [
+                {
+                    "tools": "sqlmap",
+                    "target_url": "http://dc8.local/?nid=1",
+                    "database": "d7db",
+                    "table": "users",
+                    "datatype": "columns",
+                    "payload_quantity": "1",
+                    "payload_strength": "1",
+                    "result": {
+                        "language": "varchar(12)",
+                        "access": "int(11)",
+                        "created": "int(11)",
+                        "data": "longblob",
+                        "init": "varchar(254)",
+                        "login": "int(11)",
+                        "mail": "varchar(254)",
+                        "name": "varchar(60)",
+                        "pass": "varchar(128)",
+                        "picture": "int(11)",
+                        "signature": "varchar(255)",
+                        "signature_format": "varchar(255)",
+                        "status": "tinyint(4)",
+                        "theme": "varchar(255)",
+                        "timezone": "varchar(32)",
+                        "uid": "int(10)unsigned"
+                    }
+                },
+                {
+                    "tools": "sqlmap",
+                    "target_url": "http://dc8.local/?nid=1",
+                    "database": "d7db",
+                    "table": "users",
+                    "datatype": "record",
+                    "payload_quantity": "1",
+                    "payload_strength": "1",
+                    "result": [
+                        {
+                            "uid": "0",
+                            "data": "NULL",
+                            "init": "",
+                            "mail": "",
+                            "name": "",
+                            "pass": "",
+                            "login": "0",
+                            "theme": "",
+                            "access": "0",
+                            "status": "0",
+                            "created": "0",
+                            "picture": "0",
+                            "timezone": "NULL",
+                            "signature": "",
+                            "language": "",
+                            "signature_format": "NULL"
+                        },
+                        {
+                            "uid": "1",
+                            "data": "a:2:{s:7:\"contact\";i:0;s:7:\"overlay\";i:1;}",
+                            "init": "dc8blah@dc8blah.org",
+                            "mail": "dcau-user@outlook.com",
+                            "name": "admin",
+                            "pass": "$S$D2tRcYRyqVFNSc0NvYUrYeQbLQg5koMKtihYTIDC9QQqJi3ICg5z",
+                            "login": "1567766626",
+                            "theme": "",
+                            "access": "1567766818",
+                            "status": "1",
+                            "created": "1567489015",
+                            "picture": "0",
+                            "timezone": "Australia/Brisbane",
+                            "signature": "",
+                            "language": "",
+                            "signature_format": "filtered_html"
+                        },
+                        {
+                            "uid": "2",
+                            "data": "a:5:{s:16:\"ckeditor_default\";s:1:\"t\";s:20:\"ckeditor_show_toggle\";s:1:\"t\";s:14:\"ckeditor_width\";s:4:\"100%\";s:13:\"ckeditor_lang\";s:2:\"en\";s:18:\"ckeditor_auto_lang\";s:1:\"t\";}",
+                            "init": "john@blahsdfsfd.org",
+                            "mail": "john@blahsdfsfd.org",
+                            "name": "john",
+                            "pass": "$S$DqupvJbxVmqjr6cYePnx2A891ln7lsuku/3if/oRVZJaz5mKC2vF",
+                            "login": "1567497783",
+                            "theme": "",
+                            "access": "1567498512",
+                            "status": "1",
+                            "created": "1567489250",
+                            "picture": "0",
+                            "timezone": "Australia/Brisbane",
+                            "signature": "",
+                            "language": "",
+                            "signature_format": "filtered_html"
+                        }
+                    ]
+                }
+            ]
+        },
+        "23": {
+            "date_time": "2023-04-22 20:24:18",
+            "target_server_domain": "http://owasp.local",
+            "target_server_ip": "172.16.180.129",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 1
+                },
+                "Gobuster": {
+                    "open": 1,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 1
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://owasp.local:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "Apache httpd",
+                    "Version": "2.2.14"
+                },
+                {
+                    "tools": "WhatWeb",
+                    "target_url": "http://owasp.local:80",
+                    "web_server": "Apache/2.2.14 (Ubuntu) mod_mono/2.4.3 PHP/5.3.2-1ubuntu4.30 with Suhosin-Patch proxy_html/3.0.1 mod_python/3.3.1 Python/2.6.5 mod_ssl/2.2.14 OpenSSL/0.9.8k Phusion_Passenger/4.0.38 mod_perl/2.0.4 Perl/v5.10.1",
+                    "OS": "Ubuntu Linux",
+                    "CMS_name": "unkwon",
+                    "CMS_version": "unkwon",
+                    "wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/common.txt"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3268: /cgi-bin/: Directory indexing found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-630: IIS may reveal its internal or real IP in the Location header via a request to the /images directory. The value is \"http://127.0.1.1/images/\".\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-877: HTTP TRACE method is active, suggesting the host is vulnerable to XST\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /phpmyadmin/changelog.php: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3268: /test/: Directory indexing found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /test/: This might be interesting...\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /cgi-bin/: This might be interesting... possibly a system shell found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3093: /.bash_history: A user's home directory may be set to the web root, the shell history was retrieved. This should not be accessible via the web.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3268: /icons/: Directory indexing found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3268: /images/: Directory indexing found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3268: /images/?pattern=/etc/*&sort=name: Directory indexing found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3233: /icons/README: Apache default file found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /phpmyadmin/Documentation.html: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "filtered",
+                    "result": "+ OSVDB-3268: /images/?pattern=/etc/*&sort=name: Directory indexing found.\n"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/index.html",
+                    "png_path": false,
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/common.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/assets",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_30_20_179241.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/common.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/cgi-bin",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_30_21_263335.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/common.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/evil",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_30_21_982533.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/common.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/gallery2",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_30_25_029901.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/common.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/images",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_30_27_384427.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/common.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/joomla",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_30_29_635407.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/common.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/phpBB2",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_30_30_186842.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/common.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/phpmyadmin",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_30_31_030570.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/common.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/test",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_30_31_485256.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/common.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_30_32_584814.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/common.txt"
+                }
+            ]
+        },
+        "24": {
+            "date_time": "2023-04-22 20:35:45",
+            "target_server_domain": "http://owasp.local/wordpress/",
+            "target_server_ip": "172.16.180.129",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 1
+                },
+                "Gobuster": {
+                    "open": 1,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 1
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://owasp.local:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "Apache httpd",
+                    "Version": "2.2.14"
+                },
+                {
+                    "tools": "WhatWeb",
+                    "target_url": "http://owasp.local:80/wordpress/",
+                    "web_server": "Apache/2.2.14 (Ubuntu) mod_mono/2.4.3 PHP/5.3.2-1ubuntu4.30 with Suhosin-Patch proxy_html/3.0.1 mod_python/3.3.1 Python/2.6.5 mod_ssl/2.2.14 OpenSSL/0.9.8k Phusion_Passenger/4.0.38 mod_perl/2.0.4 Perl/v5.10.1",
+                    "OS": "Ubuntu Linux",
+                    "CMS_name": "WordPress",
+                    "CMS_version": "2.0",
+                    "wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3268: /cgi-bin/: Directory indexing found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-630: IIS may reveal its internal or real IP in the Location header via a request to the /images directory. The value is \"http://127.0.1.1/images/\".\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-877: HTTP TRACE method is active, suggesting the host is vulnerable to XST\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /phpmyadmin/changelog.php: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3268: /test/: Directory indexing found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /test/: This might be interesting...\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /cgi-bin/: This might be interesting... possibly a system shell found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3093: /.bash_history: A user's home directory may be set to the web root, the shell history was retrieved. This should not be accessible via the web.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3268: /icons/: Directory indexing found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3268: /images/: Directory indexing found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3268: /images/?pattern=/etc/*&sort=name: Directory indexing found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3233: /icons/README: Apache default file found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /phpmyadmin/Documentation.html: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "filtered",
+                    "result": "+ OSVDB-3268: /images/?pattern=/etc/*&sort=name: Directory indexing found.\n"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//index.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_38_57_915219.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//readme.html",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_38_59_216422.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/admin-db.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_38_59_315186.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/import/greymatter.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_38_59_415370.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/import/livejournal.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_38_59_526594.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/install-helper.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_38_59_671723.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/link-parse-opml.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_38_59_815243.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/install.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_00_015378.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/options-head.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_00_117727.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/setup-config.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_00_215116.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/upgrade-schema.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_00_315497.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/update-links.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_00_465506.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/upgrade.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_00_616223.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-blog-header.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_00_721824.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/blank.htm",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_00_865194.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/license.html",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_01_015986.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/anchor.htm",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_02_065706.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/about.htm",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_02_365461.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/charmap.htm",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_02_725980.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/color_picker.htm",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_03_095138.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/image.htm",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_03_398512.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/link.htm",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_03_711579.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/source_editor.htm",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_03_934193.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-register.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_04_158606.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-login.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_04_395767.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/autosave/langs",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_04_512865.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/directionality/images",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_04_663081.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/directionality/langs",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_04_751250.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/inlinepopups/css",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_04_866333.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/inlinepopups/jscripts",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_04_968466.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/inlinepopups/images",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_05_060217.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/wordpress/images",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_05_157066.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/wordpress/langs",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_05_273330.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/wphelp/images",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_05_364593.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/wphelp/langs",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_05_449748.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/images",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_05_548965.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/css",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_05_643453.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/jscripts",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_05_736247.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/langs",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_20_39_05_818786.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                }
+            ]
+        },
+        "25": {
+            "date_time": "2023-04-22 20:44:17",
+            "target_server_domain": "http://owasp.local/wordpress/",
+            "target_server_ip": "172.16.180.129",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 0
+                },
+                "Gobuster": {
+                    "open": 0,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 0
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://owasp.local:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "Apache httpd",
+                    "Version": "2.2.14"
+                }
+            ]
+        },
+        "26": {
+            "date_time": "2023-04-22 21:05:04",
+            "target_server_domain": "http://owasp.local/wordpress/",
+            "target_server_ip": "172.16.180.129",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 1
+                },
+                "Gobuster": {
+                    "open": 1,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 1
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://owasp.local:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "Apache httpd",
+                    "Version": "2.2.14"
+                },
+                {
+                    "tools": "WhatWeb",
+                    "target_url": "http://owasp.local:80/wordpress/",
+                    "web_server": "Apache/2.2.14 (Ubuntu) mod_mono/2.4.3 PHP/5.3.2-1ubuntu4.30 with Suhosin-Patch proxy_html/3.0.1 mod_python/3.3.1 Python/2.6.5 mod_ssl/2.2.14 OpenSSL/0.9.8k Phusion_Passenger/4.0.38 mod_perl/2.0.4 Perl/v5.10.1",
+                    "OS": "Ubuntu Linux",
+                    "CMS_name": "WordPress",
+                    "CMS_version": "2.0",
+                    "wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3268: /cgi-bin/: Directory indexing found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-630: IIS may reveal its internal or real IP in the Location header via a request to the /images directory. The value is \"http://127.0.1.1/images/\".\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-877: HTTP TRACE method is active, suggesting the host is vulnerable to XST\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /phpmyadmin/changelog.php: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3268: /test/: Directory indexing found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /test/: This might be interesting...\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /cgi-bin/: This might be interesting... possibly a system shell found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3093: /.bash_history: A user's home directory may be set to the web root, the shell history was retrieved. This should not be accessible via the web.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3268: /icons/: Directory indexing found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3268: /images/: Directory indexing found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3268: /images/?pattern=/etc/*&sort=name: Directory indexing found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3233: /icons/README: Apache default file found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /phpmyadmin/Documentation.html: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "filtered",
+                    "result": "+ OSVDB-3268: /images/?pattern=/etc/*&sort=name: Directory indexing found.\n"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//index.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_16_367538.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//readme.html",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_17_629967.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/admin-db.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_17_670624.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/import/greymatter.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_17_707098.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/import/livejournal.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_17_749636.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/install-helper.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_17_828219.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/install.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_17_918214.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/link-parse-opml.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_17_999744.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/options-head.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_18_048875.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/setup-config.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_18_096469.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/upgrade-schema.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_18_149140.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/update-links.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_18_228063.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-admin/upgrade.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_18_312505.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-blog-header.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_18_402315.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/blank.htm",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_18_472602.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/license.html",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_18_567944.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/about.htm",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_18_790196.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/anchor.htm",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_18_963027.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/charmap.htm",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_19_076803.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/color_picker.htm",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_19_195537.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/image.htm",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_19_312553.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/link.htm",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_20_021451.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/source_editor.htm",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_20_207747.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-login.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_20_427811.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-register.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_20_636619.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/autosave/langs",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_20_800502.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/directionality/images",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_21_013226.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/directionality/langs",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_21_117221.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/inlinepopups/css",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_21_191629.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/inlinepopups/images",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_21_255530.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/inlinepopups/jscripts",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_21_327585.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/wordpress/langs",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_21_400925.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/wordpress/images",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_21_470117.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/wphelp/langs",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_21_539985.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/wphelp/images",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_21_603840.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/css",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_21_675761.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/jscripts",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_21_762725.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/images",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_21_870816.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/langs",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_22_21_08_21_972998.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt"
+                }
+            ]
+        },
+        "27": {
+            "date_time": "2023-04-22 21:10:18",
+            "target_server_domain": "http://xyz.chan2001.com:8881/vulnerabilities/sqli/?id=1&Submit=Submit#",
+            "target_server_ip": "",
+            "tools_user_agent": "",
+            "tools_config": {},
+            "tools_receivedData": [
+                {
+                    "tools": "sqlmap",
+                    "target_url": "http://xyz.chan2001.com:8881/vulnerabilities/sqli/?id=1&Submit=Submit#",
+                    "database": "dvwa",
+                    "table": "users",
+                    "datatype": "columns",
+                    "payload_quantity": "1",
+                    "payload_strength": "1",
+                    "result": {
+                        "user": "varchar(15)",
+                        "avatar": "varchar(70)",
+                        "failed_login": "int(3)",
+                        "first_name": "varchar(15)",
+                        "last_login": "timestamp",
+                        "last_name": "varchar(15)",
+                        "password": "varchar(32)",
+                        "user_id": "int(6)"
+                    }
+                }
+            ]
+        },
+        "28": {
+            "date_time": "2023-04-23 00:04:41",
+            "target_server_domain": "http://dc8.local/",
+            "target_server_ip": "172.16.180.134",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 1
+                },
+                "Gobuster": {
+                    "open": 1,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 1
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://dc8.local:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "Apache httpd",
+                    "Version": ""
+                },
+                {
+                    "tools": "WhatWeb",
+                    "target_url": "http://dc8.local:80/",
+                    "web_server": "Apache",
+                    "OS": null,
+                    "CMS_name": "Drupal",
+                    "CMS_version": null,
+                    "wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/drupal.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://dc8.local:80//index.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_23_00_06_03_718609.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/drupal.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://dc8.local:80//install.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_23_00_06_04_060993.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/drupal.txt"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /web.config: ASP config file is accessible.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /user/: This might be interesting...\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /UPGRADE.txt: Default file found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /install.php: Drupal install.php file found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /install.php: install.php file found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /LICENSE.txt: License file found may identify site software.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /xmlrpc.php: xmlrpc.php was found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3233: /INSTALL.mysql.txt: Drupal installation file found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3233: /INSTALL.pgsql.txt: Drupal installation file found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3233: /icons/README: Apache default file found.\n"
+                }
+            ]
+        },
+        "29": {
+            "date_time": "2023-04-23 00:07:27",
+            "target_server_domain": "http://dc8.local/",
+            "target_server_ip": "172.16.180.134",
+            "tools_user_agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Mobile Safari/537.36",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 1
+                },
+                "Gobuster": {
+                    "open": 1,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 1
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://dc8.local:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "Apache httpd",
+                    "Version": ""
+                },
+                {
+                    "tools": "WhatWeb",
+                    "target_url": "http://dc8.local:80/",
+                    "web_server": "Apache",
+                    "OS": null,
+                    "CMS_name": "Drupal",
+                    "CMS_version": null,
+                    "wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/drupal.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://dc8.local:80//index.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_23_00_08_29_022605.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/drupal.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://dc8.local:80//install.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_23_00_08_29_222516.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/drupal.txt"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /web.config: ASP config file is accessible.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /user/: This might be interesting...\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /UPGRADE.txt: Default file found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /install.php: Drupal install.php file found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /install.php: install.php file found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /LICENSE.txt: License file found may identify site software.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /xmlrpc.php: xmlrpc.php was found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3233: /INSTALL.mysql.txt: Drupal installation file found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3233: /INSTALL.pgsql.txt: Drupal installation file found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3233: /icons/README: Apache default file found.\n"
+                }
+            ]
+        },
+        "30": {
+            "date_time": "2023-04-23 00:17:46",
+            "target_server_domain": "http://xyz.chan2001.com",
+            "target_server_ip": "58.153.63.135",
+            "tools_user_agent": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 1
+                },
+                "Gobuster": {
+                    "open": 1,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 1
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.18.0"
+                },
+                {
+                    "tools": "nmap",
+                    "target_address": "http://xyz.chan2001.com:8888",
+                    "portid": "8888",
+                    "scanning_type": "OS",
+                    "Product": "nginx",
+                    "Version": "1.23.4"
+                },
+                {
+                    "tools": "WhatWeb",
+                    "target_url": "http://xyz.chan2001.com:80",
+                    "web_server": "nginx/1.18.0",
+                    "OS": null,
+                    "CMS_name": "unkwon",
+                    "CMS_version": "unkwon",
+                    "wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/common.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://xyz.chan2001.com:80/index.html",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_23_00_19_19_640862.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/common.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://xyz.chan2001.com:80/phpmyadmin",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_23_00_19_20_242476.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/common.txt"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /phpmyadmin/ChangeLog: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.\n"
+                }
+            ]
+        },
+        "31": {
+            "date_time": "2023-04-23 00:33:58",
+            "target_server_domain": "http://dc8.local",
+            "target_server_ip": "172.16.180.134",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 0
+                },
+                "Gobuster": {
+                    "open": 0,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 0
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://dc8.local:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "Apache httpd",
+                    "Version": ""
+                }
+            ]
+        },
+        "32": {
+            "date_time": "2023-04-23 00:40:28",
+            "target_server_domain": "http://dc8.local",
+            "target_server_ip": "172.16.180.134",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 1
+                },
+                "Gobuster": {
+                    "open": 0,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 0
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://dc8.local:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "Apache httpd",
+                    "Version": ""
+                },
+                {
+                    "tools": "WhatWeb",
+                    "target_url": "http://dc8.local:80",
+                    "web_server": "Apache",
+                    "OS": null,
+                    "CMS_name": "Drupal",
+                    "CMS_version": null,
+                    "wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/drupal.txt"
+                }
+            ]
+        },
+        "33": {
+            "date_time": "2023-04-23 00:48:12",
+            "target_server_domain": "http://dc8.local",
+            "target_server_ip": "172.16.180.134",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 0
+                },
+                "Gobuster": {
+                    "open": 0,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 0
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://dc8.local:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "Apache httpd",
+                    "Version": ""
+                }
+            ]
+        },
+        "34": {
+            "date_time": "2023-04-23 00:49:46",
+            "target_server_domain": "http://dc8.local",
+            "target_server_ip": "172.16.180.134",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 0
+                },
+                "Gobuster": {
+                    "open": 0,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 0
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://dc8.local:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "Apache httpd",
+                    "Version": ""
+                }
+            ]
+        },
+        "35": {
+            "date_time": "2023-04-23 00:52:19",
+            "target_server_domain": "http://dc8.local",
+            "target_server_ip": "172.16.180.134",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 0
+                },
+                "Gobuster": {
+                    "open": 0,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 0
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://dc8.local:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "Apache httpd",
+                    "Version": ""
+                }
+            ]
+        },
+        "36": {
+            "date_time": "2023-04-23 00:54:26",
+            "target_server_domain": "http://dc8.local",
+            "target_server_ip": "172.16.180.134",
+            "tools_user_agent": "FYP_tools",
+            "tools_config": {
+                "Nmap": {
+                    "open": 1
+                },
+                "WhatWeb": {
+                    "open": 1
+                },
+                "Gobuster": {
+                    "open": 1,
+                    "mode": "dir"
+                },
+                "Nikto": {
+                    "open": 1
+                }
+            },
+            "tools_receivedData": [
+                {
+                    "tools": "nmap",
+                    "target_address": "http://dc8.local:80",
+                    "portid": "80",
+                    "scanning_type": "OS",
+                    "Product": "Apache httpd",
+                    "Version": ""
+                },
+                {
+                    "tools": "WhatWeb",
+                    "target_url": "http://dc8.local:80",
+                    "web_server": "Apache",
+                    "OS": null,
+                    "CMS_name": "Drupal",
+                    "CMS_version": null,
+                    "wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/drupal.txt"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /web.config: ASP config file is accessible.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /user/: This might be interesting...\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /UPGRADE.txt: Default file found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /install.php: Drupal install.php file found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /install.php: install.php file found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /LICENSE.txt: License file found may identify site software.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3092: /xmlrpc.php: xmlrpc.php was found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3233: /INSTALL.mysql.txt: Drupal installation file found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3233: /INSTALL.pgsql.txt: Drupal installation file found.\n"
+                },
+                {
+                    "tools": "Nikto",
+                    "type": "raw",
+                    "result": "+ OSVDB-3233: /icons/README: Apache default file found.\n"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://dc8.local:80/index.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_23_01_00_10_996371.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/drupal.txt"
+                },
+                {
+                    "tools": "Gobuster",
+                    "mode": "dir",
+                    "url": "http://dc8.local:80/install.php",
+                    "png_path": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/website_screenshot/screenshot_history/2023_04_23_01_00_11_211467.png",
+                    "used_wordlist": "/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/drupal.txt"
+                }
+            ]
+        },
+        "37": {
+            "date_time": "2023-04-23 03:18:51",
+            "target_server_domain": "http://xyz.chan2001.com:8881/vulnerabilities/xss_r/?name=13#",
+            "target_server_ip": "",
+            "tools_user_agent": "",
+            "tools_config": {},
+            "tools_receivedData": [
+                {
+                    "tools": "xsstrike",
+                    "target_url": "http://xyz.chan2001.com:8881/vulnerabilities/xss_r/?name=13#",
+                    "cookie_info": "Cookie: PHPSESSID=pe9m2bbtvnru49cncd26cvcl6p; security=low",
+                    "result": [
+                        "<test",
+                        "<test//",
+                        "<test>",
+                        "<test x>",
+                        "<test x=y",
+                        "<test x=y//",
+                        "<test/oNxX=yYy//",
+                        "<test oNxX=yYy>",
+                        "<test onload=x",
+                        "<test/o%00nload=x",
+                        "<test sRc=xxx",
+                        "<test data=asa",
+                        "<test data=javascript:asa",
+                        "<svg x=y>",
+                        "<details x=y//",
+                        "<a href=x//",
+                        "<emBed x=y>",
+                        "<object x=y//",
+                        "<bGsOund sRc=x>",
+                        "<iSinDEx x=y//",
+                        "<aUdio x=y>",
+                        "<script x=y>",
+                        "<script//src=//",
+                        "\">payload<br/attr=\"",
+                        "\"-confirm``-\"",
+                        "<test ONdBlcLicK=x>",
+                        "<test/oNcoNTeXtMenU=x>",
+                        "<test OndRAgOvEr=x>"
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,616 @@
+
+<h1>Scanning information</h1>
+<table border="1">
+  <tr>
+    <th align="left">Date Time</th>
+    <td align="left">2023-04-22 21:05:04</td>
+  </tr>
+  <tr>
+    <th align="left">Target Server Address</th>
+    <td align="left">http://owasp.local/wordpress/</td>
+  </tr>
+  <tr>
+    <th align="left">Target Server IP</th>
+    <td align="left">172.16.180.129</td>
+  </tr>
+  <tr>
+    <th align="left">User Agent</th>
+    <td align="left">FYP_tools</td>
+  </tr>
+</table>
+
+</br></br>
+
+<h1>Tools configuration</h1>
+<table border="1">
+  <tr>
+    <th width=50>Tools</th>
+    <th width=50>Status</th>
+    <th width=50>Option</th>
+  </tr>
+
+  <tr>
+    <td width=50> Nmap </td>
+    
+      <td width=50> open </td>
+      <td width=50> 1 </td>
+    
+  </tr>
+
+  <tr>
+    <td width=50> WhatWeb </td>
+    
+      <td width=50> open </td>
+      <td width=50> 1 </td>
+    
+  </tr>
+
+  <tr>
+    <td width=50> Gobuster </td>
+    
+      <td width=50> open </td>
+      <td width=50> 1 </td>
+    
+      <td width=50> mode </td>
+      <td width=50> dir </td>
+    
+  </tr>
+
+  <tr>
+    <td width=50> Nikto </td>
+    
+      <td width=50> open </td>
+      <td width=50> 1 </td>
+    
+  </tr>
+
+</table>
+
+</br></br>
+
+<h1>Nmap</h1>
+<table border="1">
+  <tr>
+    
+    <th align="left">tools</th>
+    
+    <th align="left">target_address</th>
+    
+    <th align="left">portid</th>
+    
+    <th align="left">scanning_type</th>
+    
+    <th align="left">Product</th>
+    
+    <th align="left">Version</th>
+    
+  </tr>
+  
+  <tr>
+      
+      <td align="left">nmap</td>
+      
+      <td align="left">http://owasp.local:80</td>
+      
+      <td align="left">80</td>
+      
+      <td align="left">OS</td>
+      
+      <td align="left">Apache httpd</td>
+      
+      <td align="left">2.2.14</td>
+      
+  </tr>
+  
+</table>
+
+</br></br>
+
+<h1>Whatweb</h1>
+<table border="1">
+  <tr>
+    <th>Information</th>
+    <th>Value</th>
+  </tr>
+  
+  <tr>
+    <td>Target URL</td>
+    <td>http://owasp.local:80/wordpress/</td>
+  </tr>
+  
+  <tr>
+    <td>Web Server</td>
+    <td>Apache/2.2.14 (Ubuntu) mod_mono/2.4.3 PHP/5.3.2-1ubuntu4.30 with Suhosin-Patch proxy_html/3.0.1 mod_python/3.3.1 Python/2.6.5 mod_ssl/2.2.14 OpenSSL/0.9.8k Phusion_Passenger/4.0.38 mod_perl/2.0.4 Perl/v5.10.1</td>
+  </tr>
+  
+  <tr>
+    <td>OS</td>
+    <td>Ubuntu Linux</td>
+  </tr>
+  
+  <tr>
+    <td>Web technology</td>
+    <td>WordPress</td>
+  </tr>
+  
+  <tr>
+    <td>Version</td>
+    <td>2.0</td>
+  </tr>
+  
+  <tr>
+    <td>Recommend Wordlist for Gobuster</td>
+    <td>/Users/daniel/Desktop/fyp_temp/20230422_0211/FYP/api/../Wordlists/CMS/wordpress.txt</td>
+  </tr>
+  
+</table>
+  </tr>
+</table>
+
+</br></br>
+
+<h1>Gobuster</h1>
+<table border="1">
+  <tr>
+    <th>Mode</th>
+    <th>URL</th>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//index.php</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//readme.html</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-admin/admin-db.php</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-admin/import/greymatter.php</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-admin/import/livejournal.php</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-admin/install-helper.php</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-admin/install.php</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-admin/link-parse-opml.php</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-admin/options-head.php</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-admin/setup-config.php</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-admin/upgrade-schema.php</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-admin/update-links.php</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-admin/upgrade.php</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-blog-header.php</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-includes/js/tinymce/blank.htm</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-includes/js/tinymce/license.html</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/about.htm</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/anchor.htm</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/charmap.htm</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/color_picker.htm</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/image.htm</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/link.htm</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/source_editor.htm</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-login.php</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-register.php</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/autosave/langs</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/directionality/images</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/directionality/langs</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/inlinepopups/css</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/inlinepopups/images</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/inlinepopups/jscripts</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/wordpress/langs</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/wordpress/images</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/wphelp/langs</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-includes/js/tinymce/plugins/wphelp/images</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/css</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/jscripts</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/images</td>
+  </tr>
+  
+  <tr>
+    <td>dir</td>
+    <td>http://owasp.local:80/wordpress//wp-includes/js/tinymce/themes/advanced/langs</td>
+  </tr>
+  
+</table>
+
+</br></br>
+
+<h1>Nikto</h1>
+<table border="1">
+  <tr>
+    <th>Type</th>
+    <th>Information</th>
+  </tr>
+  
+    
+    <tr>
+      <td>raw</td>
+      <td>+ OSVDB-3268: /cgi-bin/: Directory indexing found.
+</td>
+    </tr>
+    
+    <tr>
+      <td>raw</td>
+      <td>+ OSVDB-630: IIS may reveal its internal or real IP in the Location header via a request to the /images directory. The value is "http://127.0.1.1/images/".
+</td>
+    </tr>
+    
+    <tr>
+      <td>raw</td>
+      <td>+ OSVDB-877: HTTP TRACE method is active, suggesting the host is vulnerable to XST
+</td>
+    </tr>
+    
+    <tr>
+      <td>raw</td>
+      <td>+ OSVDB-3092: /phpmyadmin/changelog.php: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.
+</td>
+    </tr>
+    
+    <tr>
+      <td>raw</td>
+      <td>+ OSVDB-3268: /test/: Directory indexing found.
+</td>
+    </tr>
+    
+    <tr>
+      <td>raw</td>
+      <td>+ OSVDB-3092: /test/: This might be interesting...
+</td>
+    </tr>
+    
+    <tr>
+      <td>raw</td>
+      <td>+ OSVDB-3092: /cgi-bin/: This might be interesting... possibly a system shell found.
+</td>
+    </tr>
+    
+    <tr>
+      <td>raw</td>
+      <td>+ OSVDB-3093: /.bash_history: A user's home directory may be set to the web root, the shell history was retrieved. This should not be accessible via the web.
+</td>
+    </tr>
+    
+    <tr>
+      <td>raw</td>
+      <td>+ OSVDB-3268: /icons/: Directory indexing found.
+</td>
+    </tr>
+    
+    <tr>
+      <td>raw</td>
+      <td>+ OSVDB-3268: /images/: Directory indexing found.
+</td>
+    </tr>
+    
+    <tr>
+      <td>raw</td>
+      <td>+ OSVDB-3268: /images/?pattern=/etc/*&sort=name: Directory indexing found.
+</td>
+    </tr>
+    
+    <tr>
+      <td>raw</td>
+      <td>+ OSVDB-3233: /icons/README: Apache default file found.
+</td>
+    </tr>
+    
+    <tr>
+      <td>raw</td>
+      <td>+ OSVDB-3092: /phpmyadmin/Documentation.html: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.
+</td>
+    </tr>
+    
+  
+    
+    <tr>
+      <td>filtered</td>
+      <td>+ OSVDB-3268: /images/?pattern=/etc/*&sort=name: Directory indexing found.
+</td>
+    </tr>
+    
+  
+</table>
+</br></br>
+
+<h1>SQLMap</h1>
+<table border="1">
+  <tr>
+    <th>Target URL</th>
+    <th>Database</th>
+    <th>Table</th>
+    <th>Data Type</th>
+    <th>Columns</th>
+    <th>Record</th>
+  </tr>
+  
+    <tr>
+      <td>http://dc8.local/?nid=1</td>
+      <td>d7db</td>
+      <td>users</td>
+      <td>columns</td>
+      <td>
+        
+          <ul>
+            
+              <li>language: varchar(12)</li>
+            
+              <li>access: int(11)</li>
+            
+              <li>created: int(11)</li>
+            
+              <li>data: longblob</li>
+            
+              <li>init: varchar(254)</li>
+            
+              <li>login: int(11)</li>
+            
+              <li>mail: varchar(254)</li>
+            
+              <li>name: varchar(60)</li>
+            
+              <li>pass: varchar(128)</li>
+            
+              <li>picture: int(11)</li>
+            
+              <li>signature: varchar(255)</li>
+            
+              <li>signature_format: varchar(255)</li>
+            
+              <li>status: tinyint(4)</li>
+            
+              <li>theme: varchar(255)</li>
+            
+              <li>timezone: varchar(32)</li>
+            
+              <li>uid: int(10)unsigned</li>
+            
+          </ul>
+        
+      </td>
+      <td>
+        
+          -
+        
+      </td>
+    </tr>
+  
+    <tr>
+      <td>http://dc8.local/?nid=1</td>
+      <td>d7db</td>
+      <td>users</td>
+      <td>record</td>
+      <td>
+        
+          -
+        
+      </td>
+      <td>
+        
+          <ul>
+            
+              <li>{'uid': '0', 'data': 'NULL', 'init': '', 'mail': '', 'name': '', 'pass': '', 'login': '0', 'theme': '', 'access': '0', 'status': '0', 'created': '0', 'picture': '0', 'timezone': 'NULL', 'signature': '', 'language': '', 'signature_format': 'NULL'}</li>
+            
+          </ul>
+        
+      </td>
+    </tr>
+  
+</table>
+    
+</br></br>
+
+
+<h1>XSStrike</h1>
+<table border="1">
+  <tr>
+    <th>Target URL</th>
+    <th>Results</th>
+  </tr>
+  
+    
+      <tr>
+        <td>http://xyz.chan2001.com:8881/vulnerabilities/xss_r/?name=13#</td>
+        <td>
+          
+            &lt;test<br>
+          
+            &lt;test//<br>
+          
+            &lt;test&gt;<br>
+          
+            &lt;test x&gt;<br>
+          
+            &lt;test x=y<br>
+          
+            &lt;test x=y//<br>
+          
+            &lt;test/oNxX=yYy//<br>
+          
+            &lt;test oNxX=yYy&gt;<br>
+          
+            &lt;test onload=x<br>
+          
+            &lt;test/o%00nload=x<br>
+          
+            &lt;test sRc=xxx<br>
+          
+            &lt;test data=asa<br>
+          
+            &lt;test data=javascript:asa<br>
+          
+            &lt;svg x=y&gt;<br>
+          
+            &lt;details x=y//<br>
+          
+            &lt;a href=x//<br>
+          
+            &lt;emBed x=y&gt;<br>
+          
+            &lt;object x=y//<br>
+          
+            &lt;bGsOund sRc=x&gt;<br>
+          
+            &lt;iSinDEx x=y//<br>
+          
+            &lt;aUdio x=y&gt;<br>
+          
+            &lt;script x=y&gt;<br>
+          
+            &lt;script//src=//<br>
+          
+            &#34;&gt;payload&lt;br/attr=&#34;<br>
+          
+            &#34;-confirm``-&#34;<br>
+          
+            &lt;test ONdBlcLicK=x&gt;<br>
+          
+            &lt;test/oNcoNTeXtMenU=x&gt;<br>
+          
+            &lt;test OndRAgOvEr=x&gt;<br>
+          
+        </td>
+      </tr>
+    
+  
+</table>

@@ -1,0 +1,13 @@
+index.php
+license.txt
+readme.html
+admin.php
+aggregator-module.pot
+archive-module.pot
+authorize.php
+update.php
+UPGRADE.txt
+web.config
+xmlrpc.php
+robots.txt
+install.php

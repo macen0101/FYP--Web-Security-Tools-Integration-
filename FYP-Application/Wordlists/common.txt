@@ -1,0 +1,14 @@
+index.html
+assets
+cgi-bin
+evil
+gallery2
+images
+joomla
+phpBB2
+phpmyadmin
+test
+wordpress
+admin
+login
+upload

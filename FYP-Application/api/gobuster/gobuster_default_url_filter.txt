@@ -1,0 +1,14 @@
+.*admin.*
+.*login.*
+.*logon.*
+.*error.*
+.*log.*
+.*debug.*
+.*upload.*
+.*edit.*
+.*user.*
+.*install.*
+.*index.*
+.*phpmyadmin.*
+.*robots.*
+.*register.*

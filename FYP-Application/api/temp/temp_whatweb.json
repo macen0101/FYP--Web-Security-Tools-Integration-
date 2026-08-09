@@ -1,0 +1,3 @@
+[
+{"target":"http://dc8.local:80","http_status":200,"request_config":{"headers":{"User-Agent":"FYP_tools"}},"plugins":{"Title":{"string":["Welcome to DC-8 | DC-8"]},"Script":{"string":["text/javascript"]},"JQuery":{},"IP":{"string":["172.16.180.134"]},"Content-Language":{"string":["en"]},"Country":{"string":["RESERVED"],"module":["ZZ"]},"Apache":{},"UncommonHeaders":{"string":["x-content-type-options,x-generator,link"]},"HTTPServer":{"string":["Apache"]},"X-Frame-Options":{"string":["SAMEORIGIN"]},"Drupal":{},"MetaGenerator":{"string":["Drupal 7 (http://drupal.org)"]}}}
+]
