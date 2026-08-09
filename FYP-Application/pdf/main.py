@@ -30,10 +30,6 @@ tools_config = result.get("tools_config",{})
 
 tools_config_results = {}
 
-# for key, value in :
-
-# print(tools_config)
-# print(tools_config_results)
 
 #Nmap
 nmap_all_result_list = DB_connect.get_one_tool_result(id=select_id, tool_name="nmap")
@@ -113,11 +109,6 @@ for result in sqlmap_result:
 
 #xsstrike
 xsstrike_results = DB_connect.get_one_tool_result(id=select_id, tool_name="xsstrike")
-# [{'tools': 'xsstrike', 'target_url': 'http://xyz.chan2001.com:8881/vulnerabilities/xss_r/?name=13#', 'cookie_info': 'Cookie: PHPSESSID=pe9m2bbtvnru49cncd26cvcl6p; security=low', 'result': ['<test', '<test//', '<test>', '<test x>', '<test x=y', '<test x=y//', '<test/oNxX=yYy//', '<test oNxX=yYy>', '<test onload=x', '<test/o%00nload=x', '<test sRc=xxx', '<test data=asa', '<test data=javascript:asa', '<svg x=y>', '<details x=y//', '<a href=x//', '<emBed x=y>', '<object x=y//', '<bGsOund sRc=x>', '<iSinDEx x=y//', '<aUdio x=y>', '<script x=y>', '<script//src=//', '">payload<br/attr="', '"-confirm``-"', '<test ONdBlcLicK=x>', '<test/oNcoNTeXtMenU=x>', '<test OndRAgOvEr=x>']}]
-# xsstrike_data = []
-# for result in xsstrike_results:
-    
-#     pass
 
 template = Template('''
 <h1>Scanning information</h1>
