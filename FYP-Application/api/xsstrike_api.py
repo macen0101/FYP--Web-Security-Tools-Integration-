@@ -110,12 +110,6 @@ class XSStrike:
             elif self.xsstrike_filter_arg == False:
                     return result, None #raw , filted     
 
-            # cmd = f"python {XSStrike.XSSTRIKE_PATH} -u {self.target} -fuzzer"
-        # elif self.request_method == "post":
-        #     # cmd = ["python3", XSSTRIKE_PATH, self.url_arg, self.target, self.fuzzer_mode, self.data_arg, self.skip_arg]
-        #     # cmd = f"python3 {XSStrike.XSSTRIKE_PATH} -u {self.target} -fuzzer --data {self.para}"
-        #     pass
-
     def execute_command(self,cmd):
         run = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, encoding="utf-8")
         print(cmd)
