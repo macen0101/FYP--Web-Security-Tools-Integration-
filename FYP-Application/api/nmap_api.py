@@ -81,7 +81,6 @@ class Nmap_scan:
                     request_status = True
                 except :
                     break
-            # print(f"{temp_target_address} {r.status_code}")  
             if request_status == True:
                 # url=f"{temp_protocol}{target_server_address}:{port['portid']}
                 data = {
@@ -96,8 +95,6 @@ class Nmap_scan:
     
 if __name__ == "__main__":
     address = "owasp.local"
-    # address = "xyz.chan2001.com"
 
     x = Nmap_scan(address)
-    # print( x.nmap_OS_dect() )
     print( x.get_running_web_server_info(target_server_address=address) )
