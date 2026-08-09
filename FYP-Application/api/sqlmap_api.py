@@ -165,12 +165,6 @@ class SQLMap:
             return self.result 
         else:
             return False 
-        
-    # def db_name_checker(self):
-    #     if self.db_name != None:
-    #         return self.db_name
-    #     elif self.db_name == None:
-    #         pass
 
     def sqlmap_post_methon(self):
         self.cmd = [self.tool, self.request_head_arg, self.injection_point, self.show_dbs_arg, self.no_asking_arg, self.payload_level_arg, self.level_arg, self.payload_risk_arg, self.risk_arg]
@@ -184,9 +178,6 @@ class SQLMap:
         run = run.stdout.readlines()
         
         return run
-
-        # run = pexpect.spawn(cmd)
-        # run = run.readlines()
 
     def sqlmap_result_filter(self):
         temp_dbs_array = list()
@@ -274,7 +265,6 @@ class SQLMap:
         return temp_dbs_array, temp_dict, tables_temp_array, temp_column_dict, records_temp_array
 
 if __name__=="__main__":
-    # sqlmap = SQLMap("http://dc8.local/?nid=1", "test", True, True, "d7db",sqlmap_result_filter_arg=True)
     sqlmap =  SQLMap(injection_point="http://dc8.local/?nid=1",user_agen="test",tables_arg=False,columns_arg=False,records_arg=True,db_name='d7db',table_name='users')
     result = sqlmap.sqlmap_get_methon()
     result = sqlmap.sqlmap_result_filter()
