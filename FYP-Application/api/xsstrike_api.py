@@ -2,9 +2,9 @@ import subprocess
 import os
 import re
 
-# XSSTRIKE_PATH = f"{os.getcwd()}/api/XSStrike/XSStrike-master/xsstrike.py"
-XSSTRIKE_PATH = "/Users/daniel/Desktop/FYP_ext_tools/XSStrike/xsstrike.py"
-# XSSTRIKE_PATH = "/home/timl/Desktop/XSStrike/xsstrike.py"
+
+XSSTRIKE_PATH = "/Users/xxxx/Desktop/FYP_ext_tools/XSStrike/xsstrike.py"
+
 class XSStrike:
     
     def __init__(self, target, headers=None, skip_dom:bool=False,fuzzer_mode:bool = False, time_out=None, request_method:str="get", xsstrike_filter_arg=False):
@@ -134,7 +134,6 @@ class XSStrike:
         return temp_array
             
 if __name__ == "__main__":
-    xsstrike = XSStrike(target="http://xyz.chan2001.com:8881/vulnerabilities/xss_r/?name=1#", headers="Cookie: PHPSESSID=pe9m2bbtvnru49cncd26cvcl6p; security=low", xsstrike_filter_arg=True, skip_dom=False)
+    xsstrike = XSStrike(target="", headers="Cookie: ; security=low", xsstrike_filter_arg=True, skip_dom=False)
     result = xsstrike.xsstrike_scan()
-    #result = ['\n', '\tXSStrike v3.1.5\n', '\n', ' WAF Status: Offline \n', ' Fuzzing parameter: name \n', ' [filtered] <test \n', ' [filtered] <test// \n', ' [filtered] <test> \n', ' [filtered] <test x> \n', ' [filtered] <test x=y \n', ' [filtered] <test x=y// \n', ' [filtered] <test/oNxX=yYy// \n', ' [filtered] <test oNxX=yYy> \n', ' [filtered] <test onload=x \n', ' [filtered] <test/o%00nload=x \n', ' [filtered] <test sRc=xxx \n', ' [filtered] <test data=asa \n', ' [filtered] <test data=javascript:asa \n', ' [filtered] <svg x=y> \n', ' [filtered] <details x=y// \n', ' [filtered] <a href=x// \n', ' [filtered] <emBed x=y> \n', ' [filtered] <object x=y// \n', ' [filtered] <bGsOund sRc=x> \n', ' [filtered] <iSinDEx x=y// \n', ' [filtered] <aUdio x=y> \n', ' [filtered] <script x=y> \n', ' [filtered] <script//src=// \n', ' [filtered] ">payload<br/attr=" \n', ' [filtered] "-confirm``-" \n', ' [filtered] <test ONdBlcLicK=x> \n', ' [filtered] <test/oNcoNTeXtMenU=x> \n', ' [filtered] <test OndRAgOvEr=x> \n']
     print(result)
